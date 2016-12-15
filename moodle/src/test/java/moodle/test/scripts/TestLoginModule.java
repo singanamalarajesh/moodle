@@ -4,7 +4,6 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
 import moodle.test.commons.pages.Dashboardpage;
@@ -15,7 +14,7 @@ public class TestLoginModule
 {
 	public WebDriver driver;
 	
-	@BeforeSuite
+	@Test
 	public void verifyLogin()
 	{
 		System.setProperty("webdriver.chrome.driver","D:\\batch227\\softwares\\chromedriver.exe");
@@ -31,8 +30,28 @@ public class TestLoginModule
 		Dashboardpage dashboard=new Dashboardpage();
 		dashboard.driver=this.driver;
 		dashboard.logout();
+		driver.close();
 		
 	}
 	
+	@Test
+	public void verifykLogin()
+	{
+		System.setProperty("webdriver.chrome.driver","D:\\batch227\\softwares\\chromedriver.exe");
+		driver=new ChromeDriver();
+		driver.get("http://localhost:81/moodle");
+		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
+		Homepage home=new Homepage();
+		home.driver=this.driver;
+		home.login();
+		Loginpage login=new Loginpage();
+		login.driver=this.driver;
+		login.login("rajesh","pandu552");
+		Dashboardpage dashboard=new Dashboardpage();
+		dashboard.driver=this.driver;
+		dashboard.logout();
+		driver.close();
+		
+	}
 	
 }
