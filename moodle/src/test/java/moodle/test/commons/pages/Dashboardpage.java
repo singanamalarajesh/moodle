@@ -3,9 +3,9 @@ package moodle.test.commons.pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-import moodle.test.scripts.LoginModule;
+import moodle.test.scripts.TestLoginModule;
 
-public class Dashboardpage extends LoginModule
+public class Dashboardpage extends TestLoginModule
 {
 	
 	public WebDriver driver;

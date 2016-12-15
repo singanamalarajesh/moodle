@@ -4,22 +4,18 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Test;
 
 import moodle.test.commons.pages.Dashboardpage;
 import moodle.test.commons.pages.Homepage;
 import moodle.test.commons.pages.Loginpage;
 
-public class LoginModule 
+public class TestLoginModule 
 {
 	public WebDriver driver;
 	
-	public static void main(String[] args) 
-	{
-		
-	    LoginModule login=new  LoginModule();
-	    login.verifyLogin();
-	}
-	
+	@BeforeSuite
 	public void verifyLogin()
 	{
 		System.setProperty("webdriver.chrome.driver","D:\\batch227\\softwares\\chromedriver.exe");

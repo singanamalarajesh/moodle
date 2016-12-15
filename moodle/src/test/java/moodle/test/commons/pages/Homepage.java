@@ -4,9 +4,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import moodle.test.scripts.LoginModule;
+import moodle.test.scripts.TestLoginModule;
 
-public class Homepage extends LoginModule
+public class Homepage extends TestLoginModule
 { 
 	public WebDriver driver;
 	
