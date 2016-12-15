@@ -28,7 +28,7 @@ public class TestLoginModule
 		Loginpage login=new Loginpage();
 		login.driver=this.driver;
 		login.login("rajesh","pandu552");
-		Dashboardpage dashboard=new Dashboardpage();
+		Dashboardpage dashboard=null;
 		dashboard.driver=this.driver;
 		dashboard.logout();
 		driver.close();
