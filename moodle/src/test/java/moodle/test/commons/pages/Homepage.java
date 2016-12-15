@@ -4,9 +4,11 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class Homepage 
+import moodle.test.scripts.LoginModule;
+
+public class Homepage extends LoginModule
 { 
-	static WebDriver driver;
+	public WebDriver driver;
 	
 	public void login()
 	{
