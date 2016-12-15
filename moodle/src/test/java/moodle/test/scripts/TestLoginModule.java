@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
+import junit.framework.Assert;
 import moodle.test.commons.pages.Dashboardpage;
 import moodle.test.commons.pages.Homepage;
 import moodle.test.commons.pages.Loginpage;
@@ -30,6 +31,7 @@ public class TestLoginModule
 		login.login("rajesh","pandu552");
 		Dashboardpage dashboard=null;
 		dashboard.driver=this.driver;
+		Assert.fail();
 		dashboard.logout();
 		driver.close();
 		
