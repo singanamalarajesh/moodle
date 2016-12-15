@@ -21,6 +21,7 @@ public class TestLoginModule
 		driver=new ChromeDriver();
 		driver.get("http://localhost:81/moodle");
 		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
+		driver.manage().window().maximize();
 		Homepage home=new Homepage();
 		home.driver=this.driver;
 		home.login();
@@ -34,24 +35,6 @@ public class TestLoginModule
 		
 	}
 	
-	@Test
-	public void verifykLogin()
-	{
-		System.setProperty("webdriver.chrome.driver","D:\\batch227\\softwares\\chromedriver.exe");
-		driver=new ChromeDriver();
-		driver.get("http://localhost:81/moodle");
-		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
-		Homepage home=new Homepage();
-		home.driver=this.driver;
-		home.login();
-		Loginpage login=new Loginpage();
-		login.driver=this.driver;
-		login.login("rajesh","pandu552");
-		Dashboardpage dashboard=new Dashboardpage();
-		dashboard.driver=this.driver;
-		dashboard.logout();
-		driver.close();
-		
-	}
+	
 	
 }
