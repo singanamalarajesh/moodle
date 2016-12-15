@@ -30,10 +30,10 @@ public class TestLoginModule
 		login.driver=this.driver;
 		login.login("rajesh","pandu552");
 		Dashboardpage dashboard=null;
-		dashboard.driver=this.driver;
+		dashboard.driver=this.dri//ver;
 		Assert.fail();
 		dashboard.logout();
-		driver.close();
+		//driver.close();
 		
 	}
 	
