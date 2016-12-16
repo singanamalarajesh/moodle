@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TS_FT_1">
+<test name="Smoke">
+<classes>
+ <class name="moodle.test.scripts.TestLoginModule">
+ </class>
+</classes>
+</test>
+</suite>
